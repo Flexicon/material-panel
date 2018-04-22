@@ -1,0 +1,6 @@
+@import 'styles/variables';
+
+mat-nav-list a.active {
+    color: $accent;
+    background-color: $light-gray;
+}

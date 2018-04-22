@@ -1,0 +1,21 @@
+@import '../../../styles/partials/media';
+
+.side,
+.content {
+    padding: 1rem;
+}
+
+.side {
+    @include media('>sm') {
+        width: 250px;
+        padding-right: 0;
+    }
+}
+
+.content {
+    flex: 1;
+
+    @include media('>sm') {
+        padding-left: 0;
+    }
+}
