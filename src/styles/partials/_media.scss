@@ -1,9 +1,12 @@
 @import '../vendor/include-media';
 
 $breakpoints: (
-    'xs': 320px,
-    'sm': 480px,
+    'sm': 600px,
     'md': 960px,
     'lg': 1280px,
-    'xl': 1440px,
+    'xl': 1920px,
+    // Set up max values for breakpoints
+    'sm-max': 959px,
+    'md-max': 1279px,
+    'lg-max': 1919px,
 );
