@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
     selector: 'app-header',
     template: `
         <mat-toolbar color="primary">
-            <a mat-button routerLink="/">Link</a>
+            <a mat-button routerLink="/">Material Panel</a>
         </mat-toolbar>`,
     styleUrls: ['./header.component.scss']
 })

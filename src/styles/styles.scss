@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
 // Vendor
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
@@ -9,7 +9,8 @@
 
 body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: $font-size-base;
+    background-color: $light-gray;
     margin: 0;
     padding: 0;
-    background-color: $light-gray;
 }

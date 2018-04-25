@@ -1,0 +1,20 @@
+@import 'styles/variables';
+
+.home {
+    text-align: center;
+    padding-top: 1rem;
+
+    &-emoji,
+    &-message {
+        color: rgba(0,0,0,0.25);
+    }
+
+    &-emoji {
+        font-size: 150px;
+    }
+
+    &-message {
+        margin-top: 2.5rem;
+        font-size: $font-size-lg;
+    }
+}

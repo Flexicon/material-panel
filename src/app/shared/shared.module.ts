@@ -2,10 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatButtonModule, MatToolbarModule, MatCardModule, MatListModule, MatIconModule } from '@angular/material';
+import {
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatListModule,
+    MatIconModule,
+    MatProgressSpinnerModule
+} from '@angular/material';
 
-import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
     imports: [
@@ -16,16 +23,18 @@ import { HomeComponent } from './components/home/home.component';
         MatCardModule,
         MatListModule,
         MatIconModule,
+        MatProgressSpinnerModule,
     ],
-    declarations: [HeaderComponent, HomeComponent],
+    declarations: [HomeComponent, LoaderComponent],
     exports: [
-        HeaderComponent,
+        LoaderComponent,
         FlexLayoutModule,
         MatButtonModule,
         MatToolbarModule,
         MatCardModule,
         MatListModule,
         MatIconModule,
+        MatProgressSpinnerModule,
     ]
 })
 export class SharedModule {
