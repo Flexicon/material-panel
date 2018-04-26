@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { AvatarModule } from 'ngx-avatar';
@@ -18,6 +19,7 @@ import {
     UserDetailsComponent
 } from '@app/features';
 import { AppRouting } from '@app/app.routing';
+import { ApiInterceptor } from '@app/core/interceptors';
 
 
 @NgModule({
@@ -40,7 +42,13 @@ import { AppRouting } from '@app/app.routing';
         SharedModule,
         AvatarModule,
     ],
-    providers: [],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: ApiInterceptor,
+            multi: true
+        },
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     notificationConfig = {
-        timeOut: 3000,
+        timeOut: 5000,
         position: ['top', 'right'],
         animate: 'scale',
     };

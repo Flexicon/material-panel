@@ -13,7 +13,7 @@ import { CryptoService, PostsService, UsersService } from '@app/core/services';
     providers: [
         PostsService,
         UsersService,
-        CryptoService
+        CryptoService,
     ]
 })
 export class CoreModule {
