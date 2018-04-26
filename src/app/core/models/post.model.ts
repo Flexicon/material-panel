@@ -1,10 +1,13 @@
-export class PostModel {
-    public id: number;
-    public userId: number;
-    public title: string;
-    public body: string;
-    public likes: number;
-    public liked: boolean;
-    public shares: number;
-    public shared: boolean;
+import { UserModel } from '@app/core/models/user.model';
+
+export interface PostModel {
+    id: number;
+    userId: number;
+    user: UserModel;
+    title: string;
+    body: string;
+    likes: number;
+    liked: boolean;
+    shares: number;
+    shared: boolean;
 }

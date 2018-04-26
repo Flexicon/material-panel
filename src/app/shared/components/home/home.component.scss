@@ -1,4 +1,5 @@
 @import 'styles/variables';
+@import 'styles/partials/media';
 
 .home {
     text-align: center;
@@ -6,11 +7,15 @@
 
     &-emoji,
     &-message {
-        color: rgba(0,0,0,0.25);
+        color: rgba(0, 0, 0, 0.25);
     }
 
     &-emoji {
-        font-size: 150px;
+        font-size: 70px;
+
+        @include media('>=sm') {
+            font-size: 150px;
+        }
     }
 
     &-message {

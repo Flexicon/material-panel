@@ -1,9 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import 'rxjs/add/operator/takeUntil';
-
-import { PostsService } from '@app/core/services';
-import { PostModel } from '@app/core/models';
 import { Subject } from 'rxjs/Subject';
+import { combineLatest } from 'rxjs/observable/combineLatest';
+import { map, find } from 'lodash';
+
+import { PostsService, UsersService } from '@app/core/services';
+import { PostModel } from '@app/core/models';
 
 @Component({
     selector: 'app-posts',
@@ -16,22 +18,26 @@ export class PostsComponent implements OnInit, OnDestroy {
     public loading = 0;
 
     constructor(
-        private postsService: PostsService
+        private postsService: PostsService,
+        private usersService: UsersService
     ) {
     }
 
     ngOnInit() {
         this.loading++;
-        this.postsService.getPosts()
-            .takeUntil(this.unsubscribe)
-            .subscribe(
-                posts => {
-                    this.loading--;
-                    this.posts = posts;
-                }, err => {
-                    this.loading--;
-                }
-            );
+        const posts$ = this.postsService.getPosts();
+        const users$ = this.usersService.getUsers();
+
+        combineLatest(posts$, users$).takeUntil(this.unsubscribe)
+            .subscribe(([posts, users]) => {
+                this.posts = map(posts, post => {
+                    post.user = find(users, user => user.id === post.userId);
+                    return post;
+                });
+                this.loading--;
+            }, err => {
+                this.loading--;
+            });
     }
 
     ngOnDestroy() {

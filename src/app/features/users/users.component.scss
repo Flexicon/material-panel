@@ -1,0 +1,25 @@
+@import 'styles/variables';
+@import 'styles/partials/media';
+
+.users {
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include media('>=md') {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include media('>=md', '<=1440px') {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include media('>=xl') {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        &-item {
+            padding: 0 1rem 1rem;
+        }
+    }
+}

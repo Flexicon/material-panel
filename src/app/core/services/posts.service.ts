@@ -18,15 +18,12 @@ export class PostsService {
     }
 
     static mapPostModel(postData: any): PostModel {
-        const post = new PostModel();
-        post.id = postData.id;
-        post.userId = postData.userId;
-        post.title = postData.title;
-        post.body = postData.body;
+        const post: PostModel = { ...postData };
         // random likes and shares for some extra functionality
         post.likes = Math.floor(Math.random() * 100);
-        post.liked = Math.random() > 0.7;
         post.shares = Math.floor(Math.random() * 100);
+        // also deciding if we liked / shared the post already
+        post.liked = Math.random() > 0.7;
         post.shared = Math.random() > 0.7;
 
         return post;
@@ -35,6 +32,6 @@ export class PostsService {
     public getPosts(): Observable<PostModel[]> {
         return this.http.get(this.baseUrl)
             .map((res: Object[]) => sampleSize(res, 20)) // 20 random posts from the 100 we get from the placeholder api
-            .map((res: Object[]) => res.map(PostsService.mapPostModel.bind(this)));
+            .map((res: Object[]) => res.map(PostsService.mapPostModel));
     }
 }

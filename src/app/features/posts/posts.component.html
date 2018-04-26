@@ -2,13 +2,13 @@
     <mat-card *ngFor="let post of posts" class="post">
         <mat-card-header>
             <div mat-card-avatar>
-                <ngx-avatar name="Test User" size="40"></ngx-avatar>
+                <ngx-avatar [name]="post.user.name" size="40"></ngx-avatar>
             </div>
             <mat-card-title>
                 <strong>{{post.title}}</strong>
             </mat-card-title>
             <mat-card-subtitle fxLayout="row" fxLayoutAlign="space-between center">
-                by: {{post.userId}}
+                by: {{post.user.username}}
                 <span class="likes"><mat-icon>thumb_up</mat-icon> {{post.likes}}</span>
                 <span class="shares"><mat-icon>share</mat-icon> {{post.shares}}</span>
             </mat-card-subtitle>
