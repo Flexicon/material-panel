@@ -9,9 +9,6 @@ import { Component, OnInit } from '@angular/core';
                 <a mat-list-item routerLink="/posts" routerLinkActive="active">
                     <mat-icon mat-list-icon>note</mat-icon> Posts
                 </a>
-                <a mat-list-item routerLink="/photos" routerLinkActive="active">
-                    <mat-icon mat-list-icon>photo_album</mat-icon> Photos
-                </a>
                 <a mat-list-item routerLink="/crypto" routerLinkActive="active">
                     <mat-icon mat-list-icon>attach_money</mat-icon> Crypto
                 </a>

@@ -6,6 +6,7 @@
 export const environment = {
     production: false,
     api: {
-        typicode: '//jsonplaceholder.typicode.com'
+        typicode: 'https://jsonplaceholder.typicode.com',
+        crypto: 'https://api.coinmarketcap.com/v1/ticker/'
     }
 };

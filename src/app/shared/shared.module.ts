@@ -8,7 +8,13 @@ import {
     MatCardModule,
     MatListModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
 } from '@angular/material';
 
 import { HomeComponent, LoaderComponent } from '@app/shared/components';
@@ -23,6 +29,12 @@ import { HomeComponent, LoaderComponent } from '@app/shared/components';
         MatListModule,
         MatIconModule,
         MatProgressSpinnerModule,
+        MatProgressBarModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatFormFieldModule,
+        MatInputModule,
     ],
     declarations: [HomeComponent, LoaderComponent],
     exports: [
@@ -34,6 +46,12 @@ import { HomeComponent, LoaderComponent } from '@app/shared/components';
         MatListModule,
         MatIconModule,
         MatProgressSpinnerModule,
+        MatProgressBarModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatFormFieldModule,
+        MatInputModule,
     ]
 })
 export class SharedModule {

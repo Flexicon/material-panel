@@ -13,7 +13,6 @@ import {
     ContentComponent,
     MenuComponent,
     PostsComponent,
-    PhotosComponent,
     CryptoComponent,
     UsersComponent,
     UserDetailsComponent
@@ -28,7 +27,6 @@ import { AppRouting } from '@app/app.routing';
         ContentComponent,
         MenuComponent,
         PostsComponent,
-        PhotosComponent,
         CryptoComponent,
         UsersComponent,
         UserDetailsComponent
