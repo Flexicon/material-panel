@@ -15,7 +15,8 @@ import {
     PostsComponent,
     PhotosComponent,
     CryptoComponent,
-    UsersComponent
+    UsersComponent,
+    UserDetailsComponent
 } from '@app/features';
 import { AppRouting } from '@app/app.routing';
 
@@ -29,7 +30,8 @@ import { AppRouting } from '@app/app.routing';
         PostsComponent,
         PhotosComponent,
         CryptoComponent,
-        UsersComponent
+        UsersComponent,
+        UserDetailsComponent
     ],
     imports: [
         BrowserModule,

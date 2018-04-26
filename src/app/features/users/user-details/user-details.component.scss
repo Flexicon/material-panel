@@ -1,0 +1,33 @@
+@import 'styles/variables';
+
+:host ::ng-deep {
+    .user {
+        &__wrap {
+            max-width: 400px;
+            margin: 0 auto;
+
+            mat-card-title {
+                font-size: $font-size-lg;
+            }
+        }
+
+        &__points {
+
+            > button {
+                margin-top: 1rem;
+                width: 100%;
+                background-color: $light-gray;
+
+                .mat-button-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                mat-icon {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

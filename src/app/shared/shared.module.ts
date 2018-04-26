@@ -11,8 +11,7 @@ import {
     MatProgressSpinnerModule
 } from '@angular/material';
 
-import { HomeComponent } from './components/home/home.component';
-import { LoaderComponent } from './components/loader/loader.component';
+import { HomeComponent, LoaderComponent } from '@app/shared/components';
 
 @NgModule({
     imports: [

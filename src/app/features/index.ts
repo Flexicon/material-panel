@@ -5,4 +5,5 @@ export * from './posts/posts.component';
 export * from './photos/photos.component';
 export * from './crypto/crypto.component';
 export * from './users/users.component';
+export * from './users/user-details/user-details.component';
 

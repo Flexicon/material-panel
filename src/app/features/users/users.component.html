@@ -1,7 +1,7 @@
-<ng-container *ngIf="!loading; else loader">
+<ng-container *ngIf="!loading">
     <div class="users__grid">
         <div class="users__grid-item" *ngFor="let user of users">
-            <mat-card>
+            <mat-card [routerLink]="['/users', user.id]">
                 <mat-card-header>
                     <div mat-card-avatar>
                         <ngx-avatar [name]="user.name" size="40"></ngx-avatar>
@@ -14,6 +14,4 @@
     </div>
 </ng-container>
 
-<ng-template #loader>
-    <app-loader></app-loader>
-</ng-template>
+<app-loader [loading]="loading"></app-loader>
