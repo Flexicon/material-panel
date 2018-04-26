@@ -23,13 +23,18 @@ export class PostsService {
         post.userId = postData.userId;
         post.title = postData.title;
         post.body = postData.body;
+        // random likes and shares for some extra functionality
+        post.likes = Math.floor(Math.random() * 100);
+        post.liked = Math.random() > 0.7;
+        post.shares = Math.floor(Math.random() * 100);
+        post.shared = Math.random() > 0.7;
 
         return post;
     }
 
     public getPosts(): Observable<PostModel[]> {
         return this.http.get(this.baseUrl)
-            .map((res: Object[]) => sampleSize(res, 20))
+            .map((res: Object[]) => sampleSize(res, 20)) // 20 random posts from the 100 we get from the placeholder api
             .map((res: Object[]) => res.map(PostsService.mapPostModel.bind(this)));
     }
 }

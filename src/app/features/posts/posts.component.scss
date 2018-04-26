@@ -1,3 +1,46 @@
+@import 'styles/variables';
+
+:host ::ng-deep {
+    mat-card-header .mat-card-header-text {
+        width: 100%;
+    }
+}
+
 .post {
     margin-bottom: 1rem;
+
+    mat-card-subtitle {
+        width: 200px;
+    }
+
+    .likes,
+    .shares {
+        mat-icon {
+            font-size: $font-size-sm;
+            height: auto;
+            width: auto;
+            margin-right: 5px;
+        }
+    }
+
+    .likes {
+        color: $primary;
+    }
+
+    .shares {
+        color: $accent;
+    }
+
+    button {
+        mat-icon {
+            font-size: $font-size-lg;
+            color: $gray;
+        }
+
+        &.active {
+            mat-icon {
+                color: inherit;
+            }
+        }
+    }
 }

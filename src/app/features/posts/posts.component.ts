@@ -39,4 +39,14 @@ export class PostsComponent implements OnInit, OnDestroy {
         this.unsubscribe.complete();
     }
 
+    togglePostLike(post: PostModel): void {
+        post.liked = !post.liked;
+        post.likes += post.liked ? 1 : -1;
+    }
+
+    togglePostShare(post: PostModel): void {
+        post.shared = !post.shared;
+        post.shares += post.shared ? 1 : -1;
+    }
+
 }

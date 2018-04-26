@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { SimpleNotificationsModule } from 'angular2-notifications';
+import { AvatarModule } from 'ngx-avatar';
 
 import { AppComponent } from '@app/app.component';
 import { SharedModule } from '@app/shared';
@@ -37,6 +38,7 @@ import { AppRouting } from '@app/app.routing';
         SimpleNotificationsModule.forRoot(),
         CoreModule,
         SharedModule,
+        AvatarModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
